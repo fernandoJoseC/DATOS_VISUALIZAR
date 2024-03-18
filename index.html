@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: #9D1844;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            color: #ffffff;
+            width: 300px;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 30px;
+        }
+
+        input[type='text'],
+        input[type='password'] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .login-button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: none;
+            color: #3a77af;
+            background-color: #ffffff;
+            cursor: pointer;
+        }
+
+        .login-button:hover {
+            background-color: #e8f0fe;
+        }
+
+        .links {
+            color: #d0e2f4;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .links:hover {
+            text-decoration: underline;
+        }
+
+        .back-button {
+            display: block;
+            margin: 20px auto 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            color: #3a77af;
+            background-color: #ffffff;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background-color: #e8f0fe;
+        }
+    </style>
+    <script>
+        function enviarFormulario(event) {
+            event.preventDefault();
+            window.location.href = 'datos.html';
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <img src="https://international-sustainable-campus-network.org/wp-content/uploads/2019/10/LogoUIDE-e1656538532276.png">
+    </div>
+    <div class="login-container">
+        <h2>Bienvenido</h2>
+        <form onsubmit="enviarFormulario(event)">
+            <input type="text" id="username" name="username" placeholder="Usuario" required>
+            <input type="password" id="password" name="password" placeholder="Contraseña" required>
+            <button type="submit" class="login-button">Login</button>
+        </form>
+        <a href="#" class="links">¿Perdiste tu contraseña?</a><br>
+        <a href="#" class="links">¿No tienes Cuenta? Regístrate</a>
+        <button onclick="location.href='pagina_anterior.html'" class="back-button">Volver</button>
+    </div>
+</body>
+</html>
