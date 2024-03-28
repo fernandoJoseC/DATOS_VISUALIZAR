@@ -82,7 +82,13 @@
     <script>
         function enviarFormulario(event) {
             event.preventDefault();
-            window.location.href = 'datos.html';
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            if(username === 'admin' && password === 'admin') {
+                window.location.href = 'datos.html';
+            } else {
+                alert('Usuario o contraseña incorrectos');
+            }
         }
     </script>
 </head>
@@ -97,8 +103,7 @@
             <input type="password" id="password" name="password" placeholder="Contraseña" required>
             <button type="submit" class="login-button">Login</button>
         </form>
-        <a href="#" class="links">¿Perdiste tu contraseña?</a><br>
-        <a href="#" class="links">¿No tienes Cuenta? Regístrate</a>
+        
         <button onclick="location.href='pagina_anterior.html'" class="back-button">Volver</button>
     </div>
 </body>
